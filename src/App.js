@@ -1,24 +1,40 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Navbar from './component/Navbar';
+
+// setting theme
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { green, purple } from '@mui/material/colors';
+import { Container } from '@mui/material';
+
+import HeroComponent from './component/HeroComponent'
+import CakeSection from './component/CakeSection';
+import ContactUS from './component/ContactUS';
+
+const theme = createTheme({
+    palette: {
+        primary: {
+            main: "#CF8691"  ,
+        },
+        secondary: {
+            main: green[500],
+        },
+    },
+});
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <ThemeProvider theme={theme} >
+        <Navbar />
+        <Container >
+          <HeroComponent />
+          <CakeSection />
+          <ContactUS />
+        </Container>
+      </ThemeProvider>
+    </>
   );
 }
 

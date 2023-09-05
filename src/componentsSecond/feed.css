@@ -1,0 +1,17 @@
+
+
+.MuiBox-root.css-195xywg{
+    margin-left:  0;
+    margin-bottom: 4px;
+}
+
+.RIghtbar-scroll {
+    height : 550px;
+    overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+.RIghtbar-scroll::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
+}
